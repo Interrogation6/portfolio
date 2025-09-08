@@ -1,4 +1,4 @@
-import ButtonBar from "./ButtonBar";
+import ButtonBar from "./components/ButtonBar";
 import "./Content.css";
 import { Outlet } from "react-router-dom";
 

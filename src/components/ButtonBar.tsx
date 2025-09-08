@@ -12,7 +12,7 @@ function ButtonBar() {
                 <a className="btn btn-outline-primary w-100 py-3" href="#projetos">Projetos</a>
               </div>
               <div className="col">
-                <a className="btn btn-outline-primary w-100 py-3" href="#experiencias">Experiencias</a>
+                <a className="btn btn-outline-primary w-100 py-3" href="#experiencias">Experiências</a>
               </div>
               <div className="col">
                 <a className="btn btn-outline-primary w-100 py-3" href="#contatos">Contatos</a>
