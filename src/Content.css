@@ -1,10 +1,49 @@
 .content{
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 80px;
     background: #fff;
     max-width: clamp(1200px,80%,100%);
     min-height: calc(100% - var(--titlebar-height));
+    overflow: hidden;
 }
 .page-wrap {
     background: linear-gradient(90deg,#ddd 0%,#ccc 10%,#ccc 90%,#ddd 100%);
+}
+/* Row that holds the buttons + separators */
+.menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;                 /* separators provide spacing */
+  flex-wrap: nowrap;      /* keep in one line on wide screens */
+  padding-block: 12px;
+}
+
+/* Thin vertical separators */
+.v-sep {
+  --sep-h: 100px;          /* ← adjust the separator height here */
+  width: 1px;
+  height: var(--sep-h);
+  background: var(--bs-border-color-translucent, rgba(0,0,0,0.15));
+  margin-inline: clamp(10px, 2vw, 20px);
+}
+
+/* Buttons look nicer with equal height */
+.menu-row .btn {
+  white-space: nowrap;
+}
+
+/* Responsive: if space is tight, wrap and hide separators */
+@media (max-width: 800px) {
+  .menu-row {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .menu-row .v-sep {
+    display: none;
+  }
+  .menu-row .btn {
+    flex: 1 1 calc(50% - 12px);   /* 2 per row on phones */
+    text-align: center;
+  }
 }

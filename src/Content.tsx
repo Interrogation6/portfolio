@@ -1,20 +1,15 @@
+import ButtonBar from "./ButtonBar";
 import "./Content.css";
+import { Outlet } from "react-router-dom";
 
-function Content() {
-    return (
+
+export default function Content() {
+  return (
     <div className="page-wrap">
       <main className="content">
-        <section>
-          <h2>Ping</h2>
-          <p>Pong!</p>
-        </section>
-        <section>
-          <h2>Pong</h2>
-          <p>Ping!</p>
-        </section>
+        <ButtonBar />
+        <Outlet />
       </main>
     </div>
-    );
+  );
 }
-
-export default Content;
