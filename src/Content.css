@@ -1,0 +1,10 @@
+.content{
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    max-width: clamp(1200px,80%,100%);
+    min-height: calc(100% - var(--titlebar-height));
+}
+.page-wrap {
+    background: linear-gradient(90deg,#ddd 0%,#ccc 10%,#ccc 90%,#ddd 100%);
+}

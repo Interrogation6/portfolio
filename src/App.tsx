@@ -1,7 +1,14 @@
-import Message from "./message"
+import TitleBar from "./TitleBar"
+import Content from "./Content"
 
 function App() {
-  return <div><Message/></div>
+  return (
+  <div className="App">
+    <TitleBar />
+
+    <Content />
+  </div>
+);
 }
 
 export default App;
