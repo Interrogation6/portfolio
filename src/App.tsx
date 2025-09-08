@@ -1,12 +1,26 @@
 import TitleBar from "./TitleBar"
 import Content from "./Content"
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import Sobre from "./Sobre";
+import Projetos from "./Projetos";
+
 
 function App() {
   return (
   <div className="App">
     <TitleBar />
 
-    <Content />
+    <Routes>
+        {/* Content is the layout; children render inside it */}
+        <Route element={<Content />}>
+          <Route index element={<Sobre />} />                 {/* "/" (home) */}
+          <Route path="projetos" element={<Projetos />} />
+          {/* <Route path="experiencias" element={<Experiencias />} /> */}
+          {/* <Route path="contatos" element={<Contatos />} /> */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+    </Routes>
   </div>
 );
 }
