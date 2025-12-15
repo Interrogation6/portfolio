@@ -1,0 +1,23 @@
+/* animatedLine.css */
+.animated-line {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 2px;
+    bottom: 0;
+    pointer-events: none;
+
+    animation: slow-mid 11s cubic-bezier(0.2, 0.0, 0.8, 1) infinite;
+    animation-delay: 3s;
+}
+@keyframes slow-mid {
+    0% {
+        transform: translateY(0vh);
+    }
+    90% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}

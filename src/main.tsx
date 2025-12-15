@@ -5,13 +5,17 @@ import Background from './components/background'
 import Intro from './pages/intro'
 import { MainProvider } from './providers/mainProvider'
 import Topbar from './components/topbar'
+import MainContent from './components/mainContent'
+import AnimatedLine from './components/animatedLine'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <MainProvider>
       <Background/>
+      <AnimatedLine/>
       <Topbar/>
       <Intro/>
+      <MainContent/>
     </MainProvider>
   </StrictMode>,
 )

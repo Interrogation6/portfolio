@@ -32,7 +32,7 @@ button:hover {
   outline-color:lightgray;
 }
 button:active {
-  font-size: 0.95em;
+  /* font-size: 0.95em; */
   outline-color: white;
   color: gray;
 }
