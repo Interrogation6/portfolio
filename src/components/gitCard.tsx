@@ -6,18 +6,18 @@ interface Props {
 
 export function RepoCard({ repo }: Readonly<Props>) {
   return (
-    <div className="card">
-      <h3>{repo.name}</h3>
+    <a className="block bg-gray-900 p-4 rounded-2xl shadow-md"
+    href={repo.html_url} target="_blank" rel="noopener noreferrer">
+      <div className="fugaz-one-regular text-lg"
+      >{repo.name}</div>
 
       <p>{repo.description ?? "Sem descrição"}</p>
 
       <span>Linguagem: {repo.language ?? "N/A"}</span>
-
-      <span>⭐ {repo.stargazers_count}</span>
-
-      <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-        Ver no GitHub
-      </a>
-    </div>
+      <div className="mt-1">
+        <span className="mt-10"
+        >⭐ {repo.stargazers_count}</span>
+      </div>
+    </a>
   );
 }

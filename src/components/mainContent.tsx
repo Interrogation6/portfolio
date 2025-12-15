@@ -6,18 +6,24 @@ import { ImSteam } from "react-icons/im";
 import { useMain } from "../hooks/useMain";
 import About from "./about";
 import React, { useState } from "react";
+import Projetos from "./projetos";
+import Experience from "./experience";
+import Contacts from "./contacts";
 
 export default function MainContent() {
     const { introHidden } = useMain();
         return (
-            <div className={`flex mx-50 mt-40 transition-opacity duration-500 ease-in ${introHidden ? "opacity-100" : "opacity-0"}`}>
-                <div className="w-2/5 p-4 mt-8 h-200 items-center">
-                    <LeftColumn/>
+            <>
+                <div className="fixed top-0 left-1/2 h-full w-400 -translate-x-1/2 -z-100 bg-black/30"/>
+                <div className={`flex mx-50 mt-40 transition-opacity duration-500 ease-in ${introHidden ? "opacity-100" : "opacity-0"}`}>
+                    <div className="w-2/5 p-4 mt-8 h-200 items-center">
+                        <LeftColumn/>
+                    </div>
+                    <div className="w-3/5 p-4 ">
+                        <ContentTabs />
+                    </div>
                 </div>
-                <div className="w-3/5 p-4 ">
-                    <ContentTabs />
-                </div>
-            </div>
+            </>
         );
 }
 
@@ -31,7 +37,7 @@ function ContentTabs() {
     const tabs: { key: TabKey; label: string }[] = [
         { key: "sobre", label: "Sobre" },
         { key: "projetos", label: "Projetos" },
-        { key: "experiencia", label: "Experiencia" },
+        { key: "experiencia", label: "Experiência" },
         { key: "contato", label: "Contato" },
     ];
 
@@ -53,7 +59,7 @@ function ContentTabs() {
             <div className="flex space-x-10 mb-10 items-center max-w-3xl">
                 {tabs.map((t) => (
                     <button
-                        className="text-2xl font-bold flex-1"
+                        className="text-2xl font-bold flex-1 border-[1px] border-white/10 !py-2 !rounded-2xl"
                         key={t.key}
                         onClick={() => switchTab(t.key)}
                     >
@@ -65,22 +71,13 @@ function ContentTabs() {
             <div className={`transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"}`}>
                 {displayTab === "sobre" && <About />}
                 {displayTab === "projetos" && (
-                    <div>
-                        <h3 className="text-xl font-semibold text-cyan-50">Projetos</h3>
-                        <p className="mt-2 text-cyan-50/90">Lista de projetos vai aqui.</p>
-                    </div>
+                    <Projetos/>
                 )}
                 {displayTab === "experiencia" && (
-                    <div>
-                        <h3 className="text-xl font-semibold text-cyan-50">Experiencia</h3>
-                        <p className="mt-2 text-cyan-50/90">Experiências profissionais e competências.</p>
-                    </div>
+                    <Experience/>
                 )}
                 {displayTab === "contato" && (
-                    <div>
-                        <h3 className="text-xl font-semibold text-cyan-50">Contato</h3>
-                        <p className="mt-2 text-cyan-50/90">Informações de contato e formulário.</p>
-                    </div>
+                    <Contacts/>
                 )}
             </div>
         </div>

@@ -36,7 +36,7 @@ export default function About() {
     </button>
   </div>
 
-  <div className={`fugaz-one-regular !font-thin transition-opacity duration-500 space-y-4 ${visible ? "opacity-100" : "opacity-0"} pl-4`}>
+  <div className={`fugaz-one-regular text-xl !font-thin transition-opacity duration-500 space-y-4 ${visible ? "opacity-100" : "opacity-0"} pl-4`}>
   {about[lang].map((line, index) => (
     <p key={index}>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
