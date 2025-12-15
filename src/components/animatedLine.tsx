@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/animatedLine.css';
 import { useMain } from '../hooks/useMain';
 

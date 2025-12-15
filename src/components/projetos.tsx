@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { RepoCard } from "./gitCard";
-import type { Repo } from "../types/GitRepo";
+import type { Repo } from "../types/gitRepo";
 
 type GitHubRepoAPI = {
   id: number;

@@ -5,7 +5,7 @@ import { RiDiscordLine } from "react-icons/ri";
 import { ImSteam } from "react-icons/im";
 import { useMain } from "../hooks/useMain";
 import About from "./about";
-import React, { useState } from "react";
+import { useState } from "react";
 import Projetos from "./projetos";
 import Experience from "./experience";
 import Contacts from "./contacts";

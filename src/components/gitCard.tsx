@@ -1,4 +1,4 @@
-import type { Repo } from "../types/GitRepo";
+import type { Repo } from "../types/gitRepo";
 
 interface Props {
   repo: Repo;
