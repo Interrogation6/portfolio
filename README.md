@@ -13,7 +13,7 @@ Este repositório contém o código-fonte do meu Portfólio personalizado.
 - Lucide React (ícones)
 - react-icons
 
-## Dependências (conforme package.json)
+## Dependências
 
 Runtime:
 - react
@@ -70,7 +70,7 @@ Produção / build estático:
 ```bash
 npm run build
 
-# visualizar build produzido
+
 npm run preview
 ```
 
