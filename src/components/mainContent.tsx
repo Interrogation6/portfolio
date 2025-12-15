@@ -14,7 +14,7 @@ export default function MainContent() {
     const { introHidden } = useMain();
         return (
             <>
-                <div className="fixed top-0 left-1/2 h-full w-400 -translate-x-1/2 -z-100 bg-black/30"/>
+                <div className={`fixed top-16 left-1/2 h-full w-400 -translate-x-1/2 -z-100 bg-black/30 transition-opacity duration-500 ease-in ${introHidden ? "opacity-100" : "opacity-0"}`}/>
                 <div className={`flex mx-50 mt-40 transition-opacity duration-500 ease-in ${introHidden ? "opacity-100" : "opacity-0"}`}>
                     <div className="w-2/5 p-4 mt-8 h-200 items-center">
                         <LeftColumn/>

@@ -43,7 +43,7 @@ export default function Contacts() {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             className="w-full bg-transparent border border-gray-700 px-3 py-2 rounded text-cyan-50 placeholder:text-cyan-50/60"
-                            placeholder="Seu nome"
+                            placeholder="..."
                             required
                         />
                     </div>
@@ -55,7 +55,7 @@ export default function Contacts() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             className="w-full bg-transparent border border-gray-700 px-3 py-2 rounded text-cyan-50 placeholder:text-cyan-50/60"
-                            placeholder="seu@email.com"
+                            placeholder="...@....com"
                             required
                         />
                     </div>
