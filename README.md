@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém o código-fonte do meu Portfólio personalizado.
 
-Currently, two official plugins are available:
+**Resumo rápido:** aplicação front-end construída com React + TypeScript e Vite, estilizada com TailwindCSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias utilizadas
 
-## React Compiler
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React (ícones)
+- react-icons
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Dependências (conforme package.json)
 
-## Expanding the ESLint configuration
+Runtime:
+- react
+- react-dom
+- lucide-react
+- react-icons
+- tailwindcss
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Dev / Build:
+- vite
+- typescript
+- @vitejs/plugin-react
+- eslint (configurações e plugins)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Estrutura de diretórios
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Pasta `src/`:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- `assets/` - imagens e recursos estáticos (somente icone do site)
+- `components/` - componentes React (ex: `about.tsx`, `mainContent.tsx`, `gitCard.tsx`, `projetos.tsx`, `contacts.tsx`)
+- `contexts/` - contextos de classes
+- `hooks/` - hooks/triggers do projeto
+- `pages/` - páginas ou seções da aplicação
+- `providers/` - providers de dados
+- `styles/` - arquivos CSS customizados
+- `types/` - definições de tipos TypeScript
+
+Arquivos de configuração:
+
+- `vite.config.ts` - configuração do Vite
+- `tsconfig.json` / `tsconfig.app.json` - TypeScript
+- `package.json` - scripts e dependências
+- `index.html` - entrada da aplicação
+
+## Instalação e execução local
+
+Pre-requisitos:
+- Node.js (recomenda-se v18+)
+
+Instalação das dependências:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Modo desenvolvimento (servidor local com hot-reload):
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Produção / build estático:
+
+```bash
+npm run build
+
+# visualizar build produzido
+npm run preview
+```
+
+Observação: o script `build` executa `tsc -b` e depois `vite build` conforme `package.json`.
+
+
+## Link do site publicado
+
+Este projeto foi publicado dentro do Render no link:
+
+- https://portfolio-7o6t.onrender.com/
+
+
